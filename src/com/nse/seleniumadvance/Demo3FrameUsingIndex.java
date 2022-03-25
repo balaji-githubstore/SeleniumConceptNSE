@@ -19,7 +19,7 @@ public class Demo3FrameUsingIndex {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.get("https://netbanking.hdfcbank.com/netbanking/");
-		
+		//using index
 		driver.switchTo().frame(0);
 		
 		driver.findElement(By.name("fldLoginUserId")).sendKeys("hello");
