@@ -1,4 +1,4 @@
-package com.nse.seleniumadvance;
+package com.nse.frame;
 
 import java.time.Duration;
 

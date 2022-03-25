@@ -1,4 +1,4 @@
-package com.nse.seleniumadvance;
+package com.nse.frame;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 //using frame webelement 
-public class Demo3FrameUsingIndex {
+public class Demo1FrameUsingWebElement {
 
 	
 	public static void main(String[] args) {
@@ -19,15 +19,13 @@ public class Demo3FrameUsingIndex {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.get("https://netbanking.hdfcbank.com/netbanking/");
-		//using index
-		driver.switchTo().frame(0);
+		
+		driver.switchTo().frame("login_page");
 		
 		driver.findElement(By.name("fldLoginUserId")).sendKeys("hello");
 		driver.findElement(By.linkText("CONTINUE")).click();
 		
 		driver.switchTo().defaultContent();
-		
-		
 	}
 }
 
