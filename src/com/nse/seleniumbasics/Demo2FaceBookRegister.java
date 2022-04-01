@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Demo2FaceBookRegister {
@@ -15,6 +16,10 @@ public class Demo2FaceBookRegister {
 		System.setProperty("webdriver.edge.driver", "D:\\Software\\msedgedriver.exe");
 		
 		WebDriver driver=new ChromeDriver();
+		
+
+		
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
