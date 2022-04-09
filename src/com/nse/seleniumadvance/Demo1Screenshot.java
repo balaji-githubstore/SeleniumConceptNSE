@@ -3,6 +3,7 @@ package com.nse.seleniumadvance;
 import java.io.File;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ public class Demo1Screenshot {
 		
 		System.setProperty("webdriver.chrome.driver", "D:\\Software\\chromedriver.exe");
 
-		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
@@ -28,7 +29,9 @@ public class Demo1Screenshot {
 		file.renameTo(new File("error.png"));
 		
 		
-//		ChromeDriver d=(ChromeDriver) driver;
+		File file1=driver.findElement(By.xpath("//img[@alt='Go']")).getScreenshotAs(OutputType.FILE);
+		file1.renameTo(new File("element1.png"));
+		//		ChromeDriver d=(ChromeDriver) driver;
 //		
 //		File file1= d.getScreenshotAs(OutputType.FILE);
 //		file1.renameTo(new File("error.png"));
