@@ -11,6 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 public class Demo5Keyboard {
 
 	public static void main(String[] args) {
+		
+		System.out.println(Keys.HELP         );
 		System.setProperty("webdriver.chrome.driver", "D:\\Software\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
@@ -28,5 +30,6 @@ public class Demo5Keyboard {
 		.sendKeys(Keys.ARROW_DOWN).pause(1000)
 		.sendKeys(Keys.ENTER).build().perform();
 
+		
 	}
 }

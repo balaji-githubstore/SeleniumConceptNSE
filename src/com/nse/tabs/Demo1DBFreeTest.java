@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Demo1DBFreeTest {
@@ -18,8 +19,8 @@ public class Demo1DBFreeTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get("https://www.db4free.net/");
-		
-		driver.findElement(By.xpath("//b[contains(text(),'phpMyAdmin')]")).click();
+		WebElement ele= driver.findElement(By.xpath("//b[contains(text(),'phpMyAdmin')]"));
+		ele.click();
 		
 		ArrayList<String> windows=new ArrayList<String>(driver.getWindowHandles());		
 		System.out.println(windows.get(0));
